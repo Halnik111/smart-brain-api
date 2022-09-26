@@ -18,6 +18,10 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('asd');
+})
+
 app.post('/signIn', (req, res) => {
     signIn.handleSignIn(req, res, knex, bcrypt);
 });
